@@ -127,23 +127,19 @@ header
 {
     display: none;
 }
-#departure:checked ~ main .flight-wrap.departure,
-#arrival:checked ~ main .flight-wrap.arrival
+#departure:checked ~ main .departure,
+#arrival:checked ~ main .arrival
 {
-    &:nth-of-type(even)
-    {
-        &:after
-        {
-            background: #a7f7f0 !important;
-        }
-    }
-    &:nth-of-type(odd)
-    {
-        &:after
-        {
-            background: #51f1e3 !important;
-        }
-    }
+    background: #a7f7f0;   
+}
+#departure:checked ~ main .departure.first,
+#arrival:checked ~ main .arrival.first
+{
+    background: #51f1e3;
+}
+#departure:checked ~ main .departure:nth-child(8)
+{
+    margin-top: 64px;
 }
 #none:checked ~ main .flight-wrap.departure,
 #none:checked ~ main .flight-wrap.arrival

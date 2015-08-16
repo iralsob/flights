@@ -88,13 +88,16 @@ header {
 #arrival:checked ~ main .flight-wrap.departure {
   display: none;
 }
-#departure:checked ~ main .flight-wrap.departure:nth-of-type(even):after,
-#arrival:checked ~ main .flight-wrap.arrival:nth-of-type(even):after {
-  background: #a7f7f0 !important;
+#departure:checked ~ main .departure,
+#arrival:checked ~ main .arrival {
+  background: #a7f7f0;
 }
-#departure:checked ~ main .flight-wrap.departure:nth-of-type(odd):after,
-#arrival:checked ~ main .flight-wrap.arrival:nth-of-type(odd):after {
-  background: #51f1e3 !important;
+#departure:checked ~ main .departure.first,
+#arrival:checked ~ main .arrival.first {
+  background: #51f1e3;
+}
+#departure:checked ~ main .departure:nth-child(8) {
+  margin-top: 64px;
 }
 #none:checked ~ main .flight-wrap.departure,
 #none:checked ~ main .flight-wrap.arrival {
