@@ -1,47 +1,53 @@
 body
 {
-    font-size: 0;
     font-family: 'Open Sans';
+    font-size: 0;
 }
 main
 {
     font-size: 13px;
-
-    display: inline-block;
-
-    width: 10%;
-
-    vertical-align: top;
     font-size: 0;
 
+    display: inline-block;
+    overflow: hidden;
+
+    width: 10%;
     width: 90%;
     margin-top: -14px;
     padding-left: 10%;
-    overflow: hidden;
+
+    vertical-align: top;
 }
 
-header {
-    position: fixed;
-    width: 90%;
-    left: 10%;
-    top: 0;
-    height: 40px;
-    overflow: hidden;
-    background: #ffd761;
-    border-bottom: 10px solid #ff6437;
-    padding-left: 10px;
-    z-index: 9;
+header
+{
     font-weight: 400;
+
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 10%;
+
+    overflow: hidden;
+
+    width: 90%;
+    height: 40px;
+    padding-left: 10px;
+
+    border-bottom: 10px solid #ff6437;
+    background: #ffd761;
 }
 .popup
 {
     font-size: 13px;
 
+    z-index: 10;
+
     display: none;
 
     padding: 10px;
+
     cursor: default;
-    z-index: 10;
     p
     {
         margin: 0;
@@ -49,84 +55,109 @@ header {
     &-close
     {
         display: none;
-        &_btn {
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              color: #ff6437;
-              width: 30px;
-              height: 30px;
-              cursor: pointer;
-              text-align: center;
-              line-height: 30px;
-              font-size: 30px;
+        &_btn
+        {
+            font-size: 30px;
+            line-height: 30px;
+
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+            width: 30px;
+            height: 30px;
+
+            cursor: pointer;
+            text-align: center;
+
+            color: #ff6437;
         }
     }
 }
-.btn {
+.btn
+{
+    position: absolute;
+
     display: inline-block;
+
     width: 32px;
     height: 32px;
-    cursor: pointer;
-    opacity: .5;
     padding: 10px;
-    position: absolute;
-    &:hover {
+
+    cursor: pointer;
+
+    opacity: .5;
+    &:hover
+    {
         opacity: .7;
     }
-    &.departure {
+    &.departure
+    {
         background: url(../img/up.png) no-repeat 50%;
     }
-    &.arrival {
-        background: url(../img/down.png) no-repeat 50%;
+    &.arrival
+    {
         top: 52px;
+
+        background: url(../img/down.png) no-repeat 50%;
     }
-    &.none {
-        color: #fe42ad;
+    &.none
+    {
         font-size: 40px;
         line-height: 32px;
+
         top: 104px;
+
+        color: #fe42ad;
     }
 }
-.btnTypeFlight:checked + label {
+.btnTypeFlight:checked + label
+{
     opacity: .7;
 }
-.btnTypeFlight {
+.btnTypeFlight
+{
     display: none;
 }
-#departure:checked ~ main .flight-wrap.arrival {
+#departure:checked ~ main .flight-wrap.arrival
+{
     display: none;
 }
-#arrival:checked ~ main .flight-wrap.departure {
+#arrival:checked ~ main .flight-wrap.departure
+{
     display: none;
 }
 #departure:checked ~ main .flight-wrap.departure,
-#arrival:checked ~ main .flight-wrap.arrival {
+#arrival:checked ~ main .flight-wrap.arrival
+{
     &:nth-of-type(even)
     {
-        &:after {
-            background: #a7f7f0 !important;    
+        &:after
+        {
+            background: #a7f7f0 !important;
         }
     }
     &:nth-of-type(odd)
     {
-        &:after {
+        &:after
+        {
             background: #51f1e3 !important;
         }
     }
 }
 #none:checked ~ main .flight-wrap.departure,
 #none:checked ~ main .flight-wrap.arrival
- {
+{
     display: block;
 }
 
 input[type='radio']:checked + label + .popup
 {
     position: fixed;
-    display: inline-block;
     top: 50%;
     left: 50%;
+
+    display: inline-block;
 
     width: 300px;
     height: 150px;
@@ -145,50 +176,57 @@ input[type='radio']:checked + label + .popup
 
         width: 100%/8;
 
-        vertical-align: middle;
         text-align: center;
+        vertical-align: middle;
     }
 }
 .flight
 {
     display: inline-block;
+
     width: 100%;
     &-wrap
     {
         font-size: 0;
-        border-left: 10px solid #ff6437;
+
         position: relative;
+
+        border-left: 10px solid #ff6437;
         input
         {
             display: none;
         }
-        &:after {
-            content: '';
-            top:0;
+        &:after
+        {
+            position: absolute;
+            z-index: -2;
+            top: 0;
+            right: 0;
             bottom: 0;
             left: 0;
-            right: 0;
-            z-index: -2;
-            position: absolute;
+
+            content: '';
         }
         &:nth-child(even)
         {
-            &:after {
-                background: #a7f7f0;    
+            &:after
+            {
+                background: #a7f7f0;
             }
-            
-
         }
         &:nth-child(odd)
         {
-            &:after {
+            &:after
+            {
                 background: #51f1e3;
             }
         }
-        &:nth-of-type(1) {
-          margin-top: 64px;
+        &:nth-of-type(1)
+        {
+            margin-top: 64px;
         }
-        &:hover {
+        &:hover
+        {
             background: #ffd761;
         }
     }
@@ -197,31 +235,38 @@ input[type='radio']:checked + label + .popup
         font-size: 13px;
         font-weight: 300;
 
+        position: relative;
+
         display: inline-block;
 
         width: 100%/8;
         height: 30px;
-
-        vertical-align: middle;
-        text-align: center;
-        position: relative;
         padding: 10px 0;
-        &_long{
+
+        text-align: center;
+        vertical-align: middle;
+        &_long
+        {
             vertical-align: top;
         }
-        img {
+        img
+        {
             width: 100%;
             max-width: 32px;
         }
-        &:hover::after {
-          content: '';
-          position: absolute;
-          left: 0px;
-          right: 0px;
-          background-color: #ffd761;
-          z-index: -1;
-          height: 10000px;
-          top: -5000px;
+        &:hover::after
+        {
+            position: absolute;
+            z-index: -1;
+            top: -5000px;
+            right: 0;
+            left: 0;
+
+            height: 10000px;
+
+            content: '';
+
+            background-color: #ffd761;
         }
     }
 }
@@ -246,9 +291,11 @@ input[type='radio']:checked + label + .popup
     {
         display: inline;
     }
-    .flight-wrap {
+    .flight-wrap
+    {
         cursor: pointer;
-        .flight {
+        .flight
+        {
             cursor: pointer;
         }
     }
@@ -262,7 +309,7 @@ input[type='radio']:checked + label + .popup
     }
 }
 @media screen and (max-width: 940px)
-{    
+{
     .company
     {
         width: 10.5%;
@@ -276,14 +323,18 @@ input[type='radio']:checked + label + .popup
         }
     }
     .airport,
-    .aircraft {
-        width: 13.5%;  
+    .aircraft
+    {
+        width: 13.5%;
     }
-    .flights-header {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+    .flights-header
+    {
         line-height: 40px;
+
+        overflow: hidden;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 }
 @media screen and (max-width: 850px)
@@ -302,7 +353,6 @@ input[type='radio']:checked + label + .popup
 }
 @media screen and (max-width: 785px)
 {
-    
     .aircraft
     {
         .flight-info_long
@@ -319,7 +369,7 @@ input[type='radio']:checked + label + .popup
 {
     .type
     {
-        width: 5%;      
+        width: 5%;
         .flight-info_long
         {
             display: none;
@@ -329,7 +379,8 @@ input[type='radio']:checked + label + .popup
             display: inline;
         }
     }
-    .status {
+    .status
+    {
         width: 20%;
     }
 }
@@ -339,10 +390,12 @@ input[type='radio']:checked + label + .popup
     {
         display: none;
     }
-    .number {
+    .number
+    {
         width: 15%;
     }
-    .status {
+    .status
+    {
         width: 30%;
     }
 }
