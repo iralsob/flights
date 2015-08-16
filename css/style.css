@@ -10,6 +10,7 @@ main {
   width: 90%;
   margin-top: -14px;
   padding-left: 10%;
+  overflow: hidden;
 }
 header {
   position: fixed;
@@ -21,6 +22,7 @@ header {
   background: #ffd761;
   border-bottom: 10px solid #ff6437;
   padding-left: 10px;
+  z-index: 9;
 }
 .popup {
   font-size: 13px;
@@ -109,6 +111,7 @@ input[type='radio']:checked + label + .popup {
   display: inline-block;
   width: 12.5%;
   vertical-align: middle;
+  text-align: center;
 }
 .flight {
   display: inline-block;
@@ -116,19 +119,29 @@ input[type='radio']:checked + label + .popup {
 }
 .flight-wrap {
   font-size: 0;
-  padding: 10px;
   border-left: 10px solid #ff6437;
+  position: relative;
 }
 .flight-wrap input {
   display: none;
 }
-.flight-wrap:nth-child(even) {
-  background: #a7f7f0;
-  background: rgba(81, 241, 227, 0.3);
+.flight-wrap:after {
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  position: absolute;
 }
-.flight-wrap:nth-child(odd) {
+.flight-wrap:nth-child(even):after {
+  background: #a7f7f0;
+}
+.flight-wrap:nth-child(odd):after {
   background: #51f1e3;
-  background: rgba(81, 241, 227, 0.6);
+}
+.flight-wrap:nth-of-type(1) {
+  margin-top: 64px;
 }
 .flight-wrap:hover {
   background: #ff6437;
@@ -137,7 +150,11 @@ input[type='radio']:checked + label + .popup {
   font-size: 13px;
   display: inline-block;
   width: 12.5%;
+  height: 40px;
   vertical-align: top;
+  text-align: center;
+  position: relative;
+  padding: 10px 0;
 }
 .flight-info_long {
   vertical-align: top;
@@ -145,6 +162,16 @@ input[type='radio']:checked + label + .popup {
 .flight-info img {
   width: 100%;
   max-width: 32px;
+}
+.flight-info:hover::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  background-color: #ff6437;
+  z-index: -1;
+  height: 5000px;
+  top: -500px;
 }
 @media screen and (min-width: 1000px) {
   .flight-info_long {

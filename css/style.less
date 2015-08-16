@@ -1,7 +1,6 @@
 body
 {
     font-size: 0;
-    background: #ffd761;
 }
 main
 {
@@ -17,6 +16,7 @@ main
     width: 90%;
     margin-top: -14px;
     padding-left: 10%;
+    overflow: hidden;
 }
 
 header {
@@ -29,6 +29,7 @@ header {
     background: #ffd761;
     border-bottom: 10px solid #ff6437;
     padding-left: 10px;
+    z-index: 9;
 }
 .popup
 {
@@ -38,6 +39,7 @@ header {
 
     padding: 10px;
     cursor: default;
+    z-index: 10;
     p
     {
         margin: 0;
@@ -133,6 +135,7 @@ input[type='radio']:checked + label + .popup
         width: 100%/8;
 
         vertical-align: middle;
+        text-align: center;
     }
 }
 .flight
@@ -142,20 +145,37 @@ input[type='radio']:checked + label + .popup
     &-wrap
     {
         font-size: 0;
-        padding: 10px;
         border-left: 10px solid #ff6437;
+        position: relative;
         input
         {
             display: none;
         }
+        &:after {
+            content: '';
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -2;
+            position: absolute;
+        }
         &:nth-child(even)
         {
-            background: #a7f7f0;
+            &:after {
+                background: #a7f7f0;    
+            }
             
+
         }
         &:nth-child(odd)
         {
-            background: #51f1e3;
+            &:after {
+                background: #51f1e3;
+            }
+        }
+        &:nth-of-type(1) {
+          margin-top: 64px;
         }
         &:hover {
             background: #ff6437;
@@ -168,14 +188,28 @@ input[type='radio']:checked + label + .popup
         display: inline-block;
 
         width: 100%/8;
+        height: 40px;
 
         vertical-align: top;
+        text-align: center;
+        position: relative;
+        padding: 10px 0;
         &_long{
             vertical-align: top;
         }
         img {
             width: 100%;
             max-width: 32px;
+        }
+        &:hover::after {
+          content: '';
+          position: absolute;
+          left: 0px;
+          right: 0px;
+          background-color: #ff6437;
+          z-index: -1;
+          height: 5000px;
+          top: -500px;
         }
     }
 }
