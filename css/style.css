@@ -1,6 +1,5 @@
 body {
   font-size: 0;
-  background: #ffd761;
 }
 main {
   font-size: 13px;
@@ -125,9 +124,14 @@ input[type='radio']:checked + label + .popup {
 }
 .flight-wrap:nth-child(even) {
   background: #a7f7f0;
+  background: rgba(81, 241, 227, 0.3);
 }
 .flight-wrap:nth-child(odd) {
   background: #51f1e3;
+  background: rgba(81, 241, 227, 0.6);
+}
+.flight-wrap:hover {
+  background: #ff6437;
 }
 .flight-info {
   font-size: 13px;
@@ -158,6 +162,9 @@ input[type='radio']:checked + label + .popup {
     display: inline;
   }
   .flight-wrap {
+    cursor: pointer;
+  }
+  .flight-wrap .flight {
     cursor: pointer;
   }
   .flight-info_short {

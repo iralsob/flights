@@ -151,10 +151,14 @@ input[type='radio']:checked + label + .popup
         &:nth-child(even)
         {
             background: #a7f7f0;
+            
         }
         &:nth-child(odd)
         {
             background: #51f1e3;
+        }
+        &:hover {
+            background: #ff6437;
         }
     }
     &-info
@@ -198,6 +202,9 @@ input[type='radio']:checked + label + .popup
     }
     .flight-wrap {
         cursor: pointer;
+        .flight {
+            cursor: pointer;
+        }
     }
     .flight-info_short
     {
