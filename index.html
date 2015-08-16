@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>Табло аэропорта</title>        
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="js/script.js"> </script>
+	</head>
+	<body>
+		<input type="radio" name="flights" value="departure" id="departure" class="btnTypeFlight">
+		<label for="departure" class="departure btn"></label>
+		<input type="radio" name="flights" id="arrival" class="btnTypeFlight">
+		<label for="arrival" class="arrival btn"></label>
+		<main>
+			<header>
+				<div class="flights-header type">Тип рейса</div>
+				<div class="flights-header">№ рейса</div>
+				<div class="flights-header company">Перевозчик</div>
+				<div class="flights-header">Тип воздушного судна</div>
+				<div class="flights-header">Аэропорт назначения</div>
+				<div class="flights-header">Плановое время вылета/прилёта</div>
+				<div class="flights-header">Статус рейса</div>
+				<div class="flights-header comment">Примечание</div>
+			</header>
+			
+			<input type="radio" name="flight" id="close" class="popup-close">
+			<div class="flight-wrap departure">
+				<input type="radio" name="flight" id="b28342">
+				<label for="b28342" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+
+			<div class="flight-wrap departure">
+				<input type="radio" name="flight" id="b283434567">
+				<label for="b283434567" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+
+			<div class="flight-wrap arrival">
+				<input type="radio" name="flight" id="b28344567">
+				<label for="b28344567" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Прилет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+
+			<div class="flight-wrap arrival">
+				<input type="radio" name="flight" id="b2834567">
+				<label for="b2834567" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Прилет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+
+			<div class="flight-wrap departure">
+				<input type="radio" name="flight" id="b283467">
+				<label for="b283467" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+
+			<div class="flight-wrap departure">
+				<input type="radio" name="flight" id="b28347">
+				<label for="b28347" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+
+			<div class="flight-wrap arrival">
+				<input type="radio" name="flight" id="b283489">
+				<label for="b283489" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Прилет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+
+			<div class="flight-wrap arrival">
+				<input type="radio" name="flight" id="b28349">
+				<label for="b28349" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Прилет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+
+			<div class="flight-wrap departure">
+				<input type="radio" name="flight" id="b28310">
+				<label for="b28310" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+			
+			<div class="flight-wrap departure">
+				<input type="radio" name="flight" id="b28311">
+				<label for="b28311" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+			
+			<div class="flight-wrap arrival">
+				<input type="radio" name="flight" id="b28312">
+				<label for="b28312" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Прилет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+			
+			<div class="flight-wrap arrival">
+				<input type="radio" name="flight" id="b28313">
+				<label for="b28313" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Прилет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+
+			<div class="flight-wrap departure">
+				<input type="radio" name="flight" id="b28314">
+				<label for="b28314" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+			
+			<div class="flight-wrap departure">
+				<input type="radio" name="flight" id="b28315">
+				<label for="b28315" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+
+			<div class="flight-wrap arrival">
+				<input type="radio" name="flight" id="b28316">
+				<label for="b28316" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Прилет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+			
+			<div class="flight-wrap arrival">
+				<input type="radio" name="flight" id="b28317">
+				<label for="b28317" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Прилет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+			
+			<div class="flight-wrap departure">
+				<input type="radio" name="flight" id="b28318">
+				<label for="b28318" class="flight">
+					<div class="flight-info type"><span class="flight-info_long">Вылет</span><span class="flight-info_short">&#8599;</span></div>
+					<div class="flight-info number">B2 8342</div>
+					<div class="flight-info company"><img src="img/aeroflot.png" alt="Logo"> <span class="flight-info_long">Аэрофлот</span></div>
+					<div class="flight-info aircraft"><span class="flight-info_long">Tupolev 154M</span><span class="flight-info_short">T154M</span></div>
+					<div class="flight-info airport"><span class="flight-info_long">Архангельск</span><span class="flight-info_short">ARH</span></div>
+					<div class="flight-info time">05:15</div>
+					<div class="flight-info status">Регистрация</div>
+					<div class="flight-info comment">Совмещен с B2 732</div>
+				</label>
+				<div class="popup">
+					<p>Полная информация о рейсе</p>
+					<p>Тип рейса: вылет</p>
+					<p>№ рейса: B2 834</p>
+					<p>Перевозчик: Аэрофлот</p>
+					<p>Тип воздушного судна: Tupolev 154M</p>
+					<p>Аэропорт назначения: Архангельск</p>
+					<p>Плановое время вылета/прилёта: 05:15</p>
+					<p>Статус рейса: Регистрация</p>
+					<p>Примечание: Совмещен с B2 732</p>
+					<label for="close" class="popup-close_btn">&#10060;</label>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
