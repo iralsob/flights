@@ -1,21 +1,212 @@
-body{font-size:0;background:#ffd761}
-main{font-size:13px;display:inline-block;width:10%;vertical-align:top;font-size:0;width:90%;margin-top:-14px;padding-left:10%}
-header{position:fixed;width:90%;left:10%;top:0;height:40px;overflow:hidden;background:#ffd761;border-bottom:10px solid #ff6437}
-.popup{font-size:13px;display:none;padding:10px;cursor:default}.popup p{margin:0}
-.popup-close{display:none}.popup-close_btn{position:absolute;top:10px;right:10px;color:#ff6437;width:30px;height:30px;cursor:pointer;text-align:center;line-height:30px;font-size:30px}
-.btn{display:inline-block;width:32px;height:32px;cursor:pointer;opacity:.5;padding:10px}.btn:hover{opacity:.7}
-.btn.departure{background:url(../img/up.png) no-repeat 50%}
-.btn.arrival{background:url(../img/down.png) no-repeat 50%}
-.btnTypeFlight:checked+label{opacity:.7}
-.btnTypeFlight{display:none}
-#departure:checked~main .flight-wrap.arrival{display:block}
-#arrival:checked~main .flight-wrap.departure{display:block}
-#departure:checked~main .flight-wrap.arrival{display:none}
-#arrival:checked~main .flight-wrap.departure{display:none}
-input[type='radio']:checked+label+.popup{position:absolute;display:inline-block;top:50%;left:50%;width:300px;height:150px;margin-top:-75px;margin-left:-150px;background:#ffd761}
-.flights-header{font-size:13px;display:inline-block;width:12.5%;vertical-align:top}
-.flight{display:inline-block;width:100%}.flight-wrap{font-size:0;padding:10px;border-left:10px solid #ff6437}.flight-wrap input{display:none}
-.flight-wrap:nth-child(even){background:#a7f7f0}
-.flight-wrap:nth-child(odd){background:#51f1e3}
-.flight-info{font-size:13px;display:inline-block;width:12.5%;vertical-align:top}
-@media screen and (min-width:1000px){.flight-info_long{display:inline} .flight-info_short{display:none} input[type='radio']:checked+label+.popup{display:none}}@media screen and (max-width:1000px){.flight-info_long{display:inline} .flight-wrap{cursor:pointer} .flight-info_short{display:none} input[type='radio']:checked+label+.popup{display:inline-block}}@media screen and (max-width:850px){.airport .flight-info_long{display:none} .airport .flight-info_short{display:inline}}@media screen and (max-width:750px){.aircraft .flight-info_long{display:none} .aircraft .flight-info_short{display:inline}}
+body {
+  font-size: 0;
+  background: #ffd761;
+}
+main {
+  font-size: 13px;
+  display: inline-block;
+  width: 10%;
+  vertical-align: top;
+  font-size: 0;
+  width: 90%;
+  margin-top: -14px;
+  padding-left: 10%;
+}
+header {
+  position: fixed;
+  width: 90%;
+  left: 10%;
+  top: 0;
+  height: 40px;
+  overflow: hidden;
+  background: #ffd761;
+  border-bottom: 10px solid #ff6437;
+}
+.popup {
+  font-size: 13px;
+  display: none;
+  padding: 10px;
+  cursor: default;
+}
+.popup p {
+  margin: 0;
+}
+.popup-close {
+  display: none;
+}
+.popup-close_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ff6437;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px;
+  font-size: 30px;
+}
+.btn {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  opacity: .5;
+  padding: 10px;
+}
+.btn:hover {
+  opacity: .7;
+}
+.btn.departure {
+  background: url(../img/up.png) no-repeat 50%;
+}
+.btn.arrival {
+  background: url(../img/down.png) no-repeat 50%;
+}
+.btnTypeFlight:checked + label {
+  opacity: .7;
+}
+.btnTypeFlight {
+  display: none;
+}
+#departure:checked ~ main .flight-wrap.arrival {
+  display: block;
+}
+#arrival:checked ~ main .flight-wrap.departure {
+  display: block;
+}
+#departure:checked ~ main .flight-wrap.arrival {
+  display: none;
+}
+#arrival:checked ~ main .flight-wrap.departure {
+  display: none;
+}
+input[type='radio']:checked + label + .popup {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 150px;
+  margin-top: -75px;
+  margin-left: -150px;
+  background: #ffd761;
+}
+.flights-header {
+  font-size: 13px;
+  display: inline-block;
+  width: 12.5%;
+  vertical-align: top;
+}
+.flight {
+  display: inline-block;
+  width: 100%;
+}
+.flight-wrap {
+  font-size: 0;
+  padding: 10px;
+  border-left: 10px solid #ff6437;
+}
+.flight-wrap input {
+  display: none;
+}
+.flight-wrap:nth-child(even) {
+  background: #a7f7f0;
+}
+.flight-wrap:nth-child(odd) {
+  background: #51f1e3;
+}
+.flight-info {
+  font-size: 13px;
+  display: inline-block;
+  width: 12.5%;
+  vertical-align: top;
+}
+.flight-info_long {
+  vertical-align: top;
+}
+.flight-info img {
+  width: 100%;
+  max-width: 32px;
+}
+@media screen and (min-width: 1000px) {
+  .flight-info_long {
+    display: inline;
+  }
+  .flight-info_short {
+    display: none;
+  }
+  input[type='radio']:checked + label + .popup {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .flight-info_long {
+    display: inline;
+  }
+  .flight-wrap {
+    cursor: pointer;
+  }
+  .flight-info_short {
+    display: none;
+  }
+  input[type='radio']:checked + label + .popup {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 915px) {
+  .company {
+    width: 10.5%;
+  }
+  .company .flight-info_long {
+    display: none;
+  }
+  .company .flight-info_short {
+    display: inline;
+  }
+  .airport,
+  .aircraft {
+    width: 13.5%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .airport .flight-info_long {
+    display: none;
+  }
+  .airport .flight-info_short {
+    display: inline;
+  }
+}
+@media screen and (max-width: 785px) {
+  .aircraft .flight-info_long {
+    display: none;
+  }
+  .aircraft .flight-info_short {
+    display: inline;
+  }
+}
+@media screen and (max-width: 750px) {
+  .type {
+    width: 5%;
+  }
+  .type .flight-info_long {
+    display: none;
+  }
+  .type .flight-info_short {
+    display: inline;
+  }
+  .status {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comment {
+    display: none;
+  }
+  .number {
+    width: 15%;
+  }
+  .status {
+    width: 22.5%;
+  }
+}

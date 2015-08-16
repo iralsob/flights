@@ -152,6 +152,13 @@ input[type='radio']:checked + label + .popup
         width: 100%/8;
 
         vertical-align: top;
+        &_long{
+            vertical-align: top;
+        }
+        img {
+            width: 100%;
+            max-width: 32px;
+        }
     }
 }
 @media screen and (min-width: 1000px)
@@ -187,6 +194,26 @@ input[type='radio']:checked + label + .popup
         display: inline-block;
     }
 }
+@media screen and (max-width: 915px)
+{
+    
+    .company
+    {
+        width: 10.5%;
+        .flight-info_long
+        {
+            display: none;
+        }
+        .flight-info_short
+        {
+            display: inline;
+        }
+    }
+    .airport,
+    .aircraft {
+        width: 13.5%;  
+    }
+}
 @media screen and (max-width: 850px)
 {
     .airport
@@ -201,8 +228,9 @@ input[type='radio']:checked + label + .popup
         }
     }
 }
-@media screen and (max-width: 750px)
+@media screen and (max-width: 785px)
 {
+    
     .aircraft
     {
         .flight-info_long
@@ -215,8 +243,34 @@ input[type='radio']:checked + label + .popup
         }
     }
 }
-  // background: url(img/up.png) no-repeat;
-  // height: 32px;
-  // display: inline-block;
-  // width: 30px;
-  // font-size: 0;
+@media screen and (max-width: 750px)
+{
+    .type
+    {
+        width: 5%;      
+        .flight-info_long
+        {
+            display: none;
+        }
+        .flight-info_short
+        {
+            display: inline;
+        }
+    }
+    .status {
+        width: 20%;
+    }
+}
+@media screen and (max-width: 650px)
+{
+    .comment
+    {
+        display: none;
+    }
+    .number {
+        width: 15%;
+    }
+    .status {
+        width: 22.5%;
+    }
+}
