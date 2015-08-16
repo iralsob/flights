@@ -21,6 +21,7 @@ header {
   overflow: hidden;
   background: #ffd761;
   border-bottom: 10px solid #ff6437;
+  padding-left: 10px;
 }
 .popup {
   font-size: 13px;
@@ -53,6 +54,7 @@ header {
   cursor: pointer;
   opacity: .5;
   padding: 10px;
+  position: absolute;
 }
 .btn:hover {
   opacity: .7;
@@ -62,6 +64,13 @@ header {
 }
 .btn.arrival {
   background: url(../img/down.png) no-repeat 50%;
+  top: 52px;
+}
+.btn.none {
+  color: #fe42ad;
+  font-size: 40px;
+  line-height: 32px;
+  top: 104px;
 }
 .btnTypeFlight:checked + label {
   opacity: .7;
@@ -81,6 +90,10 @@ header {
 #arrival:checked ~ main .flight-wrap.departure {
   display: none;
 }
+#none:checked ~ main .flight-wrap.departure,
+#none:checked ~ main .flight-wrap.arrival {
+  display: block;
+}
 input[type='radio']:checked + label + .popup {
   position: absolute;
   display: inline-block;
@@ -96,7 +109,7 @@ input[type='radio']:checked + label + .popup {
   font-size: 13px;
   display: inline-block;
   width: 12.5%;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .flight {
   display: inline-block;
@@ -167,6 +180,12 @@ input[type='radio']:checked + label + .popup {
   .airport,
   .aircraft {
     width: 13.5%;
+  }
+  .flights-header {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 40px;
   }
 }
 @media screen and (max-width: 850px) {
