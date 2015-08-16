@@ -1,5 +1,6 @@
 body {
   font-size: 0;
+  font-family: 'Open Sans';
 }
 main {
   font-size: 13px;
@@ -23,6 +24,7 @@ header {
   border-bottom: 10px solid #ff6437;
   padding-left: 10px;
   z-index: 9;
+  font-weight: 400;
 }
 .popup {
   font-size: 13px;
@@ -86,13 +88,13 @@ header {
 #arrival:checked ~ main .flight-wrap.departure {
   display: none;
 }
-#departure:checked ~ main .departure:nth-of-type(even):after,
-#arrival:checked ~ main .arrival:nth-of-type(even):after {
-  background: #51f1e3 !important;
-}
-#departure:checked ~ main .departure:nth-of-type(odd):after,
-#arrival:checked ~ main .arrival:nth-of-type(odd):after {
+#departure:checked ~ main .flight-wrap.departure:nth-of-type(even):after,
+#arrival:checked ~ main .flight-wrap.arrival:nth-of-type(even):after {
   background: #a7f7f0 !important;
+}
+#departure:checked ~ main .flight-wrap.departure:nth-of-type(odd):after,
+#arrival:checked ~ main .flight-wrap.arrival:nth-of-type(odd):after {
+  background: #51f1e3 !important;
 }
 #none:checked ~ main .flight-wrap.departure,
 #none:checked ~ main .flight-wrap.arrival {
@@ -151,9 +153,11 @@ input[type='radio']:checked + label + .popup {
 }
 .flight-info {
   font-size: 13px;
+  font-weight: 300;
   display: inline-block;
   width: 12.5%;
-  height: 40px;
+  height: 30px;
+  line-height: 30px;
   vertical-align: top;
   text-align: center;
   position: relative;
