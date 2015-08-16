@@ -101,7 +101,7 @@ header {
   display: block;
 }
 input[type='radio']:checked + label + .popup {
-  position: absolute;
+  position: fixed;
   display: inline-block;
   top: 50%;
   left: 50%;
@@ -149,7 +149,7 @@ input[type='radio']:checked + label + .popup {
   margin-top: 64px;
 }
 .flight-wrap:hover {
-  background: #ff6437;
+  background: #ffd761;
 }
 .flight-info {
   font-size: 13px;
@@ -157,8 +157,7 @@ input[type='radio']:checked + label + .popup {
   display: inline-block;
   width: 12.5%;
   height: 30px;
-  line-height: 30px;
-  vertical-align: top;
+  vertical-align: middle;
   text-align: center;
   position: relative;
   padding: 10px 0;
@@ -175,10 +174,10 @@ input[type='radio']:checked + label + .popup {
   position: absolute;
   left: 0px;
   right: 0px;
-  background-color: #ff6437;
+  background-color: #ffd761;
   z-index: -1;
-  height: 5000px;
-  top: -500px;
+  height: 10000px;
+  top: -5000px;
 }
 @media screen and (min-width: 1000px) {
   .flight-info_long {
@@ -208,7 +207,7 @@ input[type='radio']:checked + label + .popup {
     display: inline-block;
   }
 }
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 940px) {
   .company {
     width: 10.5%;
   }
@@ -267,6 +266,6 @@ input[type='radio']:checked + label + .popup {
     width: 15%;
   }
   .status {
-    width: 22.5%;
+    width: 30%;
   }
 }

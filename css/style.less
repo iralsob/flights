@@ -123,7 +123,7 @@ header {
 
 input[type='radio']:checked + label + .popup
 {
-    position: absolute;
+    position: fixed;
     display: inline-block;
     top: 50%;
     left: 50%;
@@ -189,7 +189,7 @@ input[type='radio']:checked + label + .popup
           margin-top: 64px;
         }
         &:hover {
-            background: #ff6437;
+            background: #ffd761;
         }
     }
     &-info
@@ -201,9 +201,8 @@ input[type='radio']:checked + label + .popup
 
         width: 100%/8;
         height: 30px;
-        line-height: 30px;
 
-        vertical-align: top;
+        vertical-align: middle;
         text-align: center;
         position: relative;
         padding: 10px 0;
@@ -219,10 +218,10 @@ input[type='radio']:checked + label + .popup
           position: absolute;
           left: 0px;
           right: 0px;
-          background-color: #ff6437;
+          background-color: #ffd761;
           z-index: -1;
-          height: 5000px;
-          top: -500px;
+          height: 10000px;
+          top: -5000px;
         }
     }
 }
@@ -262,7 +261,7 @@ input[type='radio']:checked + label + .popup
         display: inline-block;
     }
 }
-@media screen and (max-width: 915px)
+@media screen and (max-width: 940px)
 {    
     .company
     {
@@ -344,6 +343,6 @@ input[type='radio']:checked + label + .popup
         width: 15%;
     }
     .status {
-        width: 22.5%;
+        width: 30%;
     }
 }
