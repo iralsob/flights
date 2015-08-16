@@ -29,6 +29,7 @@ header {
   display: none;
   padding: 10px;
   cursor: default;
+  z-index: 10;
 }
 .popup p {
   margin: 0;
@@ -80,16 +81,18 @@ header {
   display: none;
 }
 #departure:checked ~ main .flight-wrap.arrival {
-  display: block;
-}
-#arrival:checked ~ main .flight-wrap.departure {
-  display: block;
-}
-#departure:checked ~ main .flight-wrap.arrival {
   display: none;
 }
 #arrival:checked ~ main .flight-wrap.departure {
   display: none;
+}
+#departure:checked ~ main .departure:nth-of-type(even):after,
+#arrival:checked ~ main .arrival:nth-of-type(even):after {
+  background: #51f1e3 !important;
+}
+#departure:checked ~ main .departure:nth-of-type(odd):after,
+#arrival:checked ~ main .arrival:nth-of-type(odd):after {
+  background: #a7f7f0 !important;
 }
 #none:checked ~ main .flight-wrap.departure,
 #none:checked ~ main .flight-wrap.arrival {
@@ -252,7 +255,7 @@ input[type='radio']:checked + label + .popup {
     width: 20%;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
   .comment {
     display: none;
   }

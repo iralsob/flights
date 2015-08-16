@@ -93,16 +93,25 @@ header {
     display: none;
 }
 #departure:checked ~ main .flight-wrap.arrival {
-    display: block;
-}
-#arrival:checked ~ main .flight-wrap.departure {
-    display: block;
-}
-#departure:checked ~ main .flight-wrap.arrival {
     display: none;
 }
 #arrival:checked ~ main .flight-wrap.departure {
     display: none;
+}
+#departure:checked ~ main .flight-wrap.departure,
+#arrival:checked ~ main .flight-wrap.arrival {
+    &:nth-of-type(even)
+    {
+        &:after {
+            background: #a7f7f0 !important;    
+        }
+    }
+    &:nth-of-type(odd)
+    {
+        &:after {
+            background: #51f1e3 !important;
+        }
+    }
 }
 #none:checked ~ main .flight-wrap.departure,
 #none:checked ~ main .flight-wrap.arrival
@@ -321,7 +330,7 @@ input[type='radio']:checked + label + .popup
         width: 20%;
     }
 }
-@media screen and (max-width: 650px)
+@media screen and (max-width: 700px)
 {
     .comment
     {
